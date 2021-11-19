@@ -30,7 +30,7 @@ void PreOrder(bittree T)
 			p = p->l;
 		}
 		else {
-			top--;
+			p = stack[--top];
 			p = p->r;
 		}
 	}
@@ -55,7 +55,7 @@ void InOrder(bittree T)
 			p = p->l;
 		}
 		else {
-			visit(stack[top--]);
+			visit(stack[--top]);
 			p = p->r;
 		}
 	}
@@ -81,7 +81,14 @@ void PostOrder(bittree T)
 		}
 		else {
 			p = stack[top-1];
-			if ()
+			if (p->r && p->r != read)
+				p = p->r;
+			else {
+				p = stack[--top];
+				visit(p);
+				read = p;
+				p = nullptr;
+			}
 		}
 	}
 }
