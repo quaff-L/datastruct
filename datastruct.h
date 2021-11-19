@@ -1,7 +1,7 @@
 #pragma once
 
 
-//¶ş²æÊ÷
+//äºŒå‰æ ‘
 typedef struct bitnode
 {
 	int data;
@@ -10,7 +10,7 @@ typedef struct bitnode
 
 void visit(bittree T) { ; }
 
-//±éÀú
+//éå†
 void preorder(bittree T)
 {
 	if (T != nullptr) {
